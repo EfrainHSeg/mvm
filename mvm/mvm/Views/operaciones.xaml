@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mvm.Views.operaciones">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#3498db"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="TextColor" Value="#2c3e50"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="50">
+            <Entry Placeholder="Enter value 1" FontSize="Title" Text="{Binding Valor1}" />
+            <Entry Placeholder="Enter value 2" FontSize="Title" Text="{Binding Valor2}" />
+            <Entry Placeholder="Enter value 3" FontSize="Title" Text="{Binding Valor3}" />
+
+            <Button Text="Sumar" FontSize="Title"  Command="{Binding Sumar}"/>
+            <Button Text="Restar" FontSize="Title"  Command="{Binding Restar}"/>
+            <Button Text="Multiplicar" FontSize="Title"  Command="{Binding Multiplicar}"/>
+            <Button Text="Dividir" FontSize="Title"  Command="{Binding Dividir}"/>
+            <Label  Text="{Binding Resultado}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
